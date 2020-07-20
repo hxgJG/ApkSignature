@@ -1,1 +1,15 @@
 /build
+# Android Studio
+*.iml
+.idea
+.idea/*
+
+# Gradle files
+.gradle
+/build
+build/
+
+# Generated files
+bin/
+gen/
+out/
