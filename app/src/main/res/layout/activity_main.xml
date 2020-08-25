@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/enter_package_name"
             android:inputType="textAutoComplete"
+            android:padding="10dp"
             app:met_clearButton="true"
             app:met_floatingLabel="normal" />
 
