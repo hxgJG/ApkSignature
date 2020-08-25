@@ -1,4 +1,4 @@
-package com.hxg.apksignature
+package com.hxg.apksignature.util
 
 import android.content.ClipData
 import android.content.ClipboardManager

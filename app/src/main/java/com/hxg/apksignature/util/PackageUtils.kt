@@ -1,6 +1,7 @@
-package com.hxg.apksignature
+package com.hxg.apksignature.util
 
 import android.content.Context
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import java.security.MessageDigest
@@ -10,7 +11,7 @@ class PackageUtils private constructor() {
     /**
      * 获取签名的MD5摘要
      */
-    fun getSignatureDigest(pkgInfo: PackageInfo): String {
+    fun getSignatureDigest(pkgInfo: PackageInfo, type: String): String {
         val length = pkgInfo.signatures.size
         if (length <= 0) {
             return ""
@@ -18,7 +19,7 @@ class PackageUtils private constructor() {
         val signature = pkgInfo.signatures[0]
         var md5: MessageDigest? = null
         try {
-            md5 = MessageDigest.getInstance("MD5")
+            md5 = MessageDigest.getInstance(type)
         } catch (e: NoSuchAlgorithmException) {
             e.printStackTrace()
         }
@@ -46,7 +47,14 @@ class PackageUtils private constructor() {
         return context.packageManager.getInstalledPackages(PackageManager.GET_SIGNATURES)
     }
 
+    fun getInstalledApplications(context: Context): List<ApplicationInfo> {
+        return context.packageManager.getInstalledApplications(PackageManager.GET_META_DATA)
+    }
+
     companion object {
+        val MD5 = "MD5"
+        val SHA1 = "SHA1"
+
         @JvmStatic
         val INSTANCE = PackageUtils()
         private val HEX_CHAR = charArrayOf(

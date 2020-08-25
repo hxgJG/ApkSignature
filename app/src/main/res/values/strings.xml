@@ -3,7 +3,11 @@
     <string name="sign_digest_hint">结果</string>
     <string name="action_tips">提示:\n&#160;&#160;&#160;&#160;(1) 单击切换大小写；\n&#160;&#160;&#160;&#160;(2) 长按复杂签名。</string>
     <string name="enter_package_name">输入app包名</string>
-    <string name="get_signature_digest">获取签名</string>
+    <string name="get_signature_digest">获取应用信息</string>
     <string name="version_code">版本号：</string>
     <string name="version_name">版本名：</string>
+    <string name="sha1_tips">SHA1值(长按复制；单击切换大小写)</string>
+    <string name="sha1_tips_without_marks">SHA1值(不含冒号，长按复制；单击切换大小写)</string>
+    <string name="md5_tips">MD5值(长按复制；单击切换大小写)</string>
+    <string name="package_label">包名</string>
 </resources>
