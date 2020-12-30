@@ -158,6 +158,19 @@
                 app:layout_constraintTop_toBottomOf="@id/app_sha1_without_marks"
                 tools:text="2.1" />
 
+            <ImageButton
+                android:id="@+id/fab"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/elevation_bg"
+                android:padding="6dp"
+                android:src="@mipmap/share"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
